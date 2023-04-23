@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowsquid - Untangle Engnineering</title>
+    <link rel="icon" type="image/x-icon" href="../static/logomark.small.png">
+    <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body>
+  <header class="bg-transparent">
+      <div class="flex fixed z-50 w-screen items-center justify-between m-auto p-5 backdrop-blur-sm">
+          <a href="#" class=" -m-1.5 p-1.5">   
+            <img class="h-8" src="../static/logo.svg" alt="Flowsquid">
+          </a>
+          <button class="bg-coral-800 text-azure-300 rounded-lg pr-6 pl-6 pt-3 pb-3">
+            Join our Waitlist
+          </button>
+      </div>
+  </header>
+  <!--  -->
+<section class="bg-cover h-screen w-screen" style="background-image: url(../static/illustration.png);">
+<div class="absolute right-0 bottom-0 mr-7 mb-7 w-72 max-w-xl min-w-[100px]">
+<div>
+  <img src="../static/white_logotype.svg" alt="Flowsquid">
+</div>
+<div class="bg-white p-4 rounded-lg">
+<div class="text-azure-300 font-RHMono font-light text-3xl">
+  UNTANGLE ENGINEERING
+</div>
+<form id="form">
+<div class="border-coral-700 m-1">
+<input type="email" class="w-full"  placeholder="Email Address" name="Email" id="email" autocomplete="email" required>
+</div>
+<div class="flex flex-row-reverse">
+<button class="bg-coral-800 text-azure-300  rounded-md m-1 pr-3 pl-3 pt-2 pb-2" id="submit" type="submit">Notify Me</button>
+</div>
+</form>
+</div>
+</div>
+
+<!-- Modal -->
+<div class="fixed hidden inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full" id="my-modal">
+  <div class="relative top-40 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+  <div class="mt-3 text-center">
+    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+      <svg
+        class="h-6 w-6 text-green-600"
+        fill="none"
+        stroke="currentColor"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M5 13l4 4L19 7"
+        ></path>
+      </svg>
+    </div>
+    <h3 class="text-lg leading-6 font-medium text-gray-900">Successful!</h3>
+    <div class="mt-2 px-7 py-3">
+      <p class="text-sm text-gray-500">
+        We will reach out to you soon!
+      </p>
+    </div>
+    <div class="items-center px-4 py-3">
+      <button
+        id="ok-btn"
+        class="px-4 py-2 bg-green-500 text-white text-base font-medium rounded-md w-full shadow-sm hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300"
+      >
+        OK
+      </button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</section>
+<section class="video bg-seaform-950 flex flex-col p-5 items-center justify-center">
+<div class="text-azure-700 text-RHDisplay m-5 font-medium max-w-2xl text-5xl">
+  Workflow automation for Devops and SRE Operations
+</div>
+<div class="w-full max-w-2xl">
+  <iframe class="w-full aspect-video max-w-4xl"
+    src="https://www.youtube.com/embed/uRGUrHOK8d4?autoplay=1&mute=1">
+  </iframe>
+</div>
+</section>
+<footer class="bg-white p-5">
+<div class="flex justify-between">
+<div class="flex-1 max-w-sm">
+<div>
+  <img src="../static/blue_logotype.svg" alt="Flowsquid">
+</div>
+<div class="text-azure-300">Design, integrate, execute and share DevOps and SRE workflows with Flowsquid. Mitigate risks of complex workflows with policy guarded executions. 
+</div>
+</div>
+<div class="flex-1 max-w-[60px]">
+  <img src="../static/transparent_logomark.svg" alt="Flowsquid">
+</div>
+</div>
+<hr class="m-3">
+<div class="text-azure-300">ⓒ 2023 Flowsquid, All Rights Reserved</div>
+</footer>
+
+<script>
+	const form = document.querySelector("#form")
+	const submitButton = document.querySelector("#submit")
+	const modal = document.querySelector("#my-modal")
+    const button = document.querySelector("#ok-btn")
+	<!-- Exposed to front end anyway -->
+	const scriptURL = 'https://script.google.com/macros/s/AKfycbw9Ijv63ucZjJmwPBtpJRI1hUL4o-3-vfEfTS7MAIBbqveVWQ0lehKJp3rSEQydOGyOHg/exec'
+
+	form.addEventListener('submit', e => {
+	  submitButton.disabled = true
+	  e.preventDefault()
+	  let requestBody = new FormData(form)
+	  fetch(scriptURL, { method: 'POST', body: requestBody})
+		.then(response => {
+		   modal.style.display = "block";
+		   submitButton.disabled = false
+		  })
+		.catch(error => {
+		  alert('Error!', error.message)
+		  submitButton.disabled = false
+		}
+		)
+	})
+
+  // We want the modal to close when the OK button is clicked
+  button.onclick = function() {
+    modal.style.display = "none";
+  }
+  </script>
+</body>
+</html>

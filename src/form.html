@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            bgblue: '#EFF6FF',
+          }
+        }
+      }
+    }
+  </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+          .content-auto {
+            content-visibility: auto;
+          }
+        }
+      </style>
+</head>
+<body class="h-screen bg-blue-300">
+  <div class="prose lg:prose-xl grid h-screen place-items-center">
+    <div>
+        <h1 class="text-3xl font-bold text-white">
+        Flowsquid!
+        </h1>
+        <div class="text-xl">
+            Make your early morning deploys a thing of the past!
+        </div>
+  </div>
+  <div class="flex justify-center items-center v-screen">
+    <form id="form">
+        <div>
+            <input type="email" id="email" name="Email" placeholder="Email Address" />
+            <span class="button" id="submit">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Notify me!</button>
+              </span>
+        </div>
+      </form>
+          
+  </div>
+</div>
+<script>
+  const form = document.querySelector("#form")
+  const submitButton = document.querySelector("#submit")
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw9Ijv63ucZjJmwPBtpJRI1hUL4o-3-vfEfTS7MAIBbqveVWQ0lehKJp3rSEQydOGyOHg/exec'
+
+  form.addEventListener('submit', e => {
+    submitButton.disabled = true
+    e.preventDefault()
+    let requestBody = new FormData(form)
+    fetch(scriptURL, { method: 'POST', body: requestBody})
+      .then(response => {
+         alert('Success!', response)
+         submitButton.disabled = false
+        })
+      .catch(error => {
+      alert('Error!', error.message)
+        submitButton.disabled = false
+
+      }
+      )
+  })
+</script>
+</body>
+</html>
