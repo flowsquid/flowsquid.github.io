@@ -574,6 +574,10 @@ video {
   margin: auto;
 }
 
+.m-7{
+  margin: 1.75rem;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -635,6 +639,14 @@ video {
   height: 100vh;
 }
 
+.h-72{
+  height: 18rem;
+}
+
+.h-\[193px\]{
+  height: 193px;
+}
+
 .w-12{
   width: 3rem;
 }
@@ -657,6 +669,19 @@ video {
 
 .w-screen{
   width: 100vw;
+}
+
+.w-\[152\.5px\]{
+  width: 152.5px;
+}
+
+.w-auto{
+  width: auto;
+}
+
+.w-max{
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .min-w-\[100px\]{
@@ -683,6 +708,10 @@ video {
   max-width: 36rem;
 }
 
+.max-w-\[152px\]{
+  max-width: 152px;
+}
+
 .flex-1{
   flex: 1 1 0%;
 }
@@ -701,6 +730,10 @@ video {
 
 .items-center{
   align-items: center;
+}
+
+.justify-start{
+  justify-content: flex-start;
 }
 
 .justify-center{
@@ -733,6 +766,20 @@ video {
 
 .border{
   border-width: 1px;
+}
+
+.border-2{
+  border-width: 2px;
+}
+
+.border-x-4{
+  border-left-width: 4px;
+  border-right-width: 4px;
+}
+
+.border-y-4{
+  border-top-width: 4px;
+  border-bottom-width: 4px;
 }
 
 .border-coral-700{
@@ -790,6 +837,18 @@ video {
 
 .bg-cover{
   background-size: cover;
+}
+
+.bg-\[bottom\]{
+  background-position: bottom;
+}
+
+.bg-bottom{
+  background-position: bottom;
+}
+
+.bg-no-repeat{
+  background-repeat: no-repeat;
 }
 
 .p-1{
@@ -960,6 +1019,17 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+.blur-3xl{
+  --tw-blur: blur(64px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.backdrop-blur-3xl{
+  --tw-backdrop-blur: blur(64px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
 .backdrop-blur-sm{
   --tw-backdrop-blur: blur(4px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
@@ -976,9 +1046,18 @@ video {
   background-color: rgb(22 163 74 / var(--tw-bg-opacity));
 }
 
+.focus\:border-coral-700:focus{
+  --tw-border-opacity: 1;
+  border-color: rgb(244 125 114 / var(--tw-border-opacity));
+}
+
 .focus\:outline-none:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+.focus\:outline-0:focus{
+  outline-width: 0px;
 }
 
 .focus\:ring-2:focus{
@@ -990,4 +1069,83 @@ video {
 .focus\:ring-green-300:focus{
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(134 239 172 / var(--tw-ring-opacity));
+}
+
+@media (min-width: 640px){
+  .sm\:bg-\[right_35\%_bottom_45\%\;\]{
+    background-color: right 35% bottom 45%;;
+  }
+
+  .sm\:bg-white{
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .sm\:bg-\[\]{
+    background-color: ;
+  }
+
+  .sm\:bg-none{
+    background-image: none;
+  }
+
+  .sm\:bg-right{
+    background-position: right;
+  }
+
+  .sm\:bg-left{
+    background-position: left;
+  }
+
+  .sm\:bg-right-top{
+    background-position: right top;
+  }
+
+  .sm\:bg-bottom{
+    background-position: bottom;
+  }
+
+  .sm\:bg-\[center_top_1rem\]{
+    background-position: center top 1rem;
+  }
+
+  .sm\:bg-\[50\%_60\%\]{
+    background-position: 50% 60%;
+  }
+
+  .sm\:bg-\[20\%_60\%\]{
+    background-position: 20% 60%;
+  }
+
+  .sm\:bg-\[20\%_20\%\]{
+    background-position: 20% 20%;
+  }
+
+  .sm\:bg-\[100\%_20\%\]{
+    background-position: 100% 20%;
+  }
+
+  .sm\:bg-\[bottom\]{
+    background-position: bottom;
+  }
+
+  .sm\:bg-left-top{
+    background-position: left top;
+  }
+
+  .sm\:bg-no-repeat{
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 768px){
+  .md\:bg-\[bottom\]{
+    background-position: bottom;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:bg-cover{
+    background-size: cover;
+  }
 }
