@@ -11,8 +11,10 @@
 </head>
 
 <body class="font-sans">
+  <div class="z-50 flex justify-center fixed w-[100%]">
+    <div class="max-w-[1200px] min-w-[320px] w-[100%]">
   <header class="bg-transparent">
-    <div class="flex fixed z-50 w-screen items-center justify-between m-auto p-5 backdrop-blur-sm">
+    <div class="flex z-50 items-center justify-between m-auto p-7 backdrop-blur-sm w-[100%]">
       <a href="#" class="-m-1.5 p-1.5">
         <img class="h-8" src="./static/logo.svg" alt="Flowsquid">
       </a>
@@ -21,9 +23,14 @@
       </button>
     </div>
   </header>
+    </div>
+  </div>
   <!--  -->
-  <section class=" h-screen w-screen bg-cover bg-no-repeat bg-bottom sm:bg-left-top" style="background-image: url(./static/illustration.webp);">
-      <div class="absolute right-0 bottom-0 max-w-[18rem] m-7 sm:m-7 sm:h-72 sm:w-72 sm:max-w-xl sm:min-w-[100px]">
+  <section class="h-[90vh] w-screen bg-cover bg-no-repeat bg-bottom sm:bg-left-top"
+  style="background-image: url(./static/illustration.webp);">
+    <div class="flex justify-center w-[100vw]">
+      <div class="h-[90vh] max-h-[100%] min-h-[100%] w-[100%] max-w-[1200px] min-w-[320px]  flex flex-row-reverse items-end flex-wrap " style="justify-content: end;">
+    <div class="max-w-[18rem] m-7 sm:m-7 sm:h-96 sm:w-96 sm:max-w-xl sm:min-w-[100px]">
           <img class="drop-shadow-[0_4px_4px_rgba(0,0,0,0.25)]" src="./static/white_logotype.svg" alt="Flowsquid">
         <div class="bg-white backdrop-blur-sm p-4 rounded-lg">
           <div class="text-azure-300 font-RHMono font-light text-3xl">
@@ -31,7 +38,7 @@
           </div>
           <form id="form">
             <div class=" m-1">
-              <input type="email" class="w-full border-4 border-solid border-opacity-50 border-coral-700 focus:outline-coral-700  " placeholder="Email Address" name="Email" id="email" autocomplete="email"
+              <input type="email" class="w-full border-4 border-solid border-opacity-50 rounded-md border-coral-700 focus:outline-coral-700" placeholder="Email Address" name="Email" id="email" autocomplete="email"
                 required>
             </div>
             <div class="flex flex-row-reverse">
@@ -68,7 +75,8 @@
       </div>
 
     </div>
-
+    </div>
+    </div>
   </section>
   <section class="video bg-seaform-950 flex flex-col p-5 items-center justify-center">
     <div class="text-center text-azure-700 font-RHDisplay m-5 font-extrabold max-w-2xl text-5xl">
@@ -82,6 +90,8 @@
       </iframe>
     </div>
   </section>
+  <div class="flex justify-center w-[100%]">
+    <div class="max-w-[1200px] min-w-[320px] w-[100%]">
   <footer class="bg-white p-5">
     <div class="flex justify-between">
       <div class="flex-1 max-w-sm">
@@ -98,7 +108,8 @@
     <hr class="m-3">
     <div class="text-azure-300">ⓒ 2023 Flowsquid, All Rights Reserved</div>
   </footer>
-
+  </div>
+  </div>
   <script>
     const form = document.querySelector("#form")
     const submitButton = document.querySelector("#submit")
